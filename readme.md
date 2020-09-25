@@ -90,3 +90,12 @@
   - Horizontal: scaling out acoress multiple nodes
 
 - Reliability: described by the likelihood of failure based on actual measurements
+
+## Software Architecture
+
+- [Software Architecture | Architectural patterns | Architecture vs Design pattern](https://www.youtube.com/watch?v=lTkL1oIMiaU&list=PLSyLGd0D0b4ThfElztKEueqQ5SIHJjUEU&index=1)
+
+- The Architecture is the input of the development phrase in the SDLC.
+
+Software Architecture / Software Architecture Patterns
+Client/Server, Peer-to-Peer, Monolithic, Microservices, REST
