@@ -64,17 +64,12 @@
 - Three steps:
 
   1. manifest: describe the container
-
   2. image: a read-only template that contains a set of instructions for creating a container that can run on the container platform
-
   3. container: contains all the libraries or binary needed to run the application
 
 - It is different from VM:
-
   - different VMs have different OS and each VM has its own binaries and libraries.
-
   - container is hosting on top of OS. Each container shares the host OS kernel, binaries and libraries. Those components are read-only for each container.
-
   - container is light-weight compares to VM, because it doesn't have guestOS.
 
 ## Cloud Scalability, and Reliability
@@ -86,7 +81,6 @@
 - Scalability: the term is used to describe how the application will handle increased loads of traffic volume
 
   - Vertical: scaling up a single node
-
   - Horizontal: scaling out acoress multiple nodes
 
 - Reliability: described by the likelihood of failure based on actual measurements
@@ -100,17 +94,13 @@
 - Software Architecture contains three parts:
 
   - Architectural Patterns: How the defining overall components of a software system are organized and assembled.
-
   - Messaging & APIs: How the components communicate with each other.
-
   - Quality Atrributes(-ilities): The constraints the whole system is ruled by.
 
 - Differnce between architectural pattern and design pattern:
 
   - **Architectural pattern exists in architecture phrase**, while _Design pattern exists in development phrase_.
-
   - **Architectural pattern deals with high-level, universal scope**, while _Design pattern deals with lower-level scope_.
-
   - **Architectural pattern deals with how components are organized** and assembled, while _Design pattern deals with how components are built_.
 
 - Examples of architectural patterns:
@@ -124,11 +114,9 @@
     - server: a computer program provides functionality and serve other programs/clients
 
       - type of servers: Apache web servers(serve http requests), database server(run data management server)
-
       - server is always listening for request, and as soon as it receives one, responds with a message
 
     - Client/Server pattern work in request(Client), response(Server) cycle via HTTP requests.
-
     - Client/Server pattern is centralized structure
 
   - Peer-to-Peer
@@ -145,4 +133,55 @@
 
   - Microservices:
 
-  - REST:
+    - the system is fragmented into different independent services, such that each service can be built by different technologies
+    - services: can be a single function or a group of classes that cooperate to achieve some functionality. The size of the service is decided in the design phrase
+    - each service should have specific task
+    - each service should not functionally dependent on other services
+    - each service communicates through HTTP call/ APIs
+    - Pros:
+
+      - Scalability & Etensibility
+      - Scaling at the service level
+      - Future-proof: optimization, switching technology, adding feature, maintenance
+      - Ease of Deployment and Testing
+      - Reusability
+      - Default Architectural pattern in the cloud
+      - Fault Tolerance: since each service is independent from others
+
+    - Cons:
+
+      - Extra work: developers have to maintance different services
+      - High latency: since each service has to communicate through HTTP calls
+      - Testing at the application level
+
+  - REpresentational State Transfer(REST):
+
+    - [YouTube Video on APIs | REST | REST APIs Demystified](https://www.youtube.com/watch?v=FOZtRzY5x8E&list=PLSyLGd0D0b4ThfElztKEueqQ5SIHJjUEU&index=6)
+
+    - Web Services are just APIs, but not every API is a web service
+    - REST API = REST web service
+    - A REST API is an API that follows the rules of REST specification
+    - REST is a way to implement and use the HTTP protocal(an application layer protocol for sending and receiving messages over a network)
+
+    - Rules that each API needs to follow for RESTful:
+
+      - method information: the information should express in HTTP verbs: GET, POST, DELETE
+      - scoping information: the data information to be operated on, RESTful required the data should be in URIs
+
+  - Serverless
+
+    - It is possible after the Cloud technology
+    - helps the companies to focus on bussiness logic
+    - building software without worring about servers
+    - example: AWS Lambda
+    - Pros:
+
+      - less server-side work
+      - reduced cost, don't need to hire anyone for backend works
+      - reduced risk and increased efficiency -- relying on cloud providers
+      - autho-scaling
+
+    - Cons:
+      - managing state is relatively complex
+      - higher latency
+      - vender lock-in ---- heavily depend on the cloud providers
