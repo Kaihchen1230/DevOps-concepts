@@ -95,7 +95,54 @@
 
 - [Software Architecture | Architectural patterns | Architecture vs Design pattern](https://www.youtube.com/watch?v=lTkL1oIMiaU&list=PLSyLGd0D0b4ThfElztKEueqQ5SIHJjUEU&index=1)
 
-- The Architecture is the input of the development phrase in the SDLC.
+- The Architecture is the input of the development phrase in the [SDLC](https://github.com/Kaihchen1230/DevOps-concepts#software-delivery-cycle).
 
-Software Architecture / Software Architecture Patterns
-Client/Server, Peer-to-Peer, Monolithic, Microservices, REST
+- Software Architecture contains three parts:
+
+  - Architectural Patterns: How the defining overall components of a software system are organized and assembled.
+
+  - Messaging & APIs: How the components communicate with each other.
+
+  - Quality Atrributes(-ilities): The constraints the whole system is ruled by.
+
+- Differnce between architectural pattern and design pattern:
+
+  - **Architectural pattern exists in architecture phrase**, while _Design pattern exists in development phrase_.
+
+  - **Architectural pattern deals with high-level, universal scope**, while _Design pattern deals with lower-level scope_.
+
+  - **Architectural pattern deals with how components are organized** and assembled, while _Design pattern deals with how components are built_.
+
+- Examples of architectural patterns:
+
+  - Client/Server pattern
+
+    - client: the device or program that can make request through the web
+
+      - example: web browser
+
+    - server: a computer program provides functionality and serve other programs/clients
+
+      - type of servers: Apache web servers(serve http requests), database server(run data management server)
+
+      - server is always listening for request, and as soon as it receives one, responds with a message
+
+    - Client/Server pattern work in request(Client), response(Server) cycle via HTTP requests.
+
+    - Client/Server pattern is centralized structure
+
+  - Peer-to-Peer
+
+    - Peer-to-Peer is decentralized strcture
+    - no client and no server
+    - both devices can be reqestor and response providers
+    - each one is able to send and receive data directly with one another
+    - examples of Peer-to-Peer:
+      - BitTorrent protocol: a communication protocol for file sharing
+      - videochat protocol
+
+  - Monolithic:
+
+  - Microservices:
+
+  - REST:
